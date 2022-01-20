@@ -1,0 +1,35 @@
+body {
+    background-image: url(../image/45degreee_fabric.png);
+}
+
+header{
+    font-family: Dongle, serif;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btnCont{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px
+}
+
+.grid{
+    outline: 1px solid;
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+
+.gridCont{
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+}
