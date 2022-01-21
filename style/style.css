@@ -12,14 +12,17 @@ header{
 
 .content{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 100px;
 }
 .btnCont{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    justify-content: center;
     gap: 30px
 }
+
 
 .grid{
     background-color: white;
@@ -35,3 +38,26 @@ header{
 
 }
 
+#colorPicker{
+    padding: 0px;
+    border-radius: 0px;
+
+}
+
+.btnCont button{
+    font-family: Dongle, serif;
+    display: flex;
+    background-color: #e6b0ac;
+    padding: 5px 10px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+
+.btnCont button:hover{
+    color: rgb(255, 255, 255, 1);
+    box-shadow: 0 5px 15px #d85f60;
+
+}

@@ -26,7 +26,26 @@ clickSlider.addEventListener("input", update);
 
 function set(choice){
     selection = choice;
-    console.log(selection)
+    switch (choice){
+        case "random":
+            clickRandom.setAttribute("style", `background-color: #8f4639; color: rgb(256,256,256)`);
+            clickBnw.setAttribute("style", `background-color: #e6b0ac; color: rgb(256,256,256)`);
+            clickEraser.setAttribute("style", `background-color: #e6b0ac; color: rgb(256,256,256)`);
+
+            break;
+        case "bnw":
+            clickBnw.setAttribute("style", `background-color: #8f4639; color: rgb(256,256,256)`);
+            clickEraser.setAttribute("style", `background-color: #e6b0ac; color: rgb(256,256,256)`);
+            clickRandom.setAttribute("style", `background-color: #e6b0ac; color: rgb(256,256,256)`);
+            break;
+
+        case "eraser":
+            clickEraser.setAttribute("style", `background-color: #8f4639; color: rgb(256,256,256)`);
+            clickRandom.setAttribute("style", `background-color: #e6b0ac; color: rgb(256,256,256)`);
+            clickBnw.setAttribute("style", `background-color: #e6b0ac; color: rgb(256,256,256)`);
+            break;
+
+    }
 }
 
 function createGrid1(gridNum){
@@ -104,5 +123,8 @@ function random(num){
     return Math.floor(Math.random() * (num + 1))
 }
 
+
+
 createGrid1(clickSlider.value)
 mouseHover()
+update()
