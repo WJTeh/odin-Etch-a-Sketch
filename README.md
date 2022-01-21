@@ -10,3 +10,22 @@
 8x8 = 56
 9x9 =81
 10x10 = 100
+
+
+
+.gridCont{
+display: flex;
+height: auto;
+border: 2px solid black;
+max-width: 500px;
+max-height: 500px;
+}
+
+function createGrid(gridNum = 16){
+for (let i = 0; i < gridNum**2; i++){
+let div = document.createElement("div");
+div.classList.add("grid");
+div.setAttribute("style", `width: ${Math.round(500/gridNum)}px; height: ${Math.round(500/gridNum)}px`)
+gridCont.appendChild(div)
+}
+}

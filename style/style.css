@@ -23,14 +23,15 @@ header{
 
 .grid{
     background-color: white;
-    display: flex;
 }
 
-.gridCont{
-    display: flex;
-    flex-wrap: wrap;
-    height: auto;
-    border: 2px solid black;
-    max-width: 500px;
-    max-height: 500px;
+
+
+#gridCont {
+    display: grid;
+
+    height: 600px;
+    width: 600px;
+
 }
+

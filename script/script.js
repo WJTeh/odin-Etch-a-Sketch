@@ -9,6 +9,7 @@ const clickEraser = document.getElementById("eraser")
 const clickClear = document.getElementById("clear")
 const clickSlider = document.getElementById("gridSlider")
 const sliderValue = document.getElementById("sliderValue")
+const gridCont = document.getElementById("gridCont")
 
 let update = () => {
     sliderValue.textContent = `${clickSlider.value} x ${clickSlider.value}`
@@ -28,10 +29,18 @@ function set(choice){
     console.log(selection)
 }
 
+function createGrid1(gridNum){
+    gridCont.style.gridTemplateColumns = `repeat(${gridNum}, 1fr)`
+    gridCont.style.gridTemplateRows = `repeat(${gridNum}, 1fr)`
+
+    for (c = 0; c < (gridNum ** 2); c++){
+        let div = document.createElement("div");
+        div.classList.add("grid")
+        gridCont.appendChild(div)
+    }
+}
 
 function createGrid(gridNum = 16){
-    //let gridCont = document.querySelector(".gridCont");
-    //gridCont.setAttribute("style", `width: ${gridNum * 30}px`)
     for (let i = 0; i < gridNum**2; i++){
         let div = document.createElement("div");
         div.classList.add("grid");
@@ -49,7 +58,7 @@ function mouseHover(){
 
 function clearGrid(){
     removeGrid()
-    createGrid(clickSlider.value)
+    createGrid1(clickSlider.value)
 }
 
 
@@ -95,5 +104,5 @@ function random(num){
     return Math.floor(Math.random() * (num + 1))
 }
 
-createGrid(clickSlider.value)
+createGrid1(clickSlider.value)
 mouseHover()
