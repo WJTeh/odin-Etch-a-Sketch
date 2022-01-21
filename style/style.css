@@ -22,14 +22,15 @@ header{
 }
 
 .grid{
-    outline: 1px solid;
-    width: 30px;
-    height: 30px;
+    background-color: white;
     display: flex;
 }
 
 .gridCont{
     display: flex;
-    height: auto;
     flex-wrap: wrap;
+    height: auto;
+    border: 2px solid black;
+    max-width: 500px;
+    max-height: 500px;
 }

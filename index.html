@@ -14,12 +14,20 @@
     <header>Etch-a-Sketch</header>
     <div class="content">
         <div class="btnCont">
-            <button type="button">Color</button>
-            <button type="button">Random</button>
-            <button type="button">Clear</button>
-            <button type="button">Grid</button>
+            <div class="chooseColor">
+                <label for="colorPicker">Solid Color</label>
+                <input type="color" id="colorPicker" value="#000000">
+            </div>
+            <button type="button" id="random">Random</button>
+            <button type="button" id="bnw">Greyscale</button>
+            <button type="button" id="eraser">Eraser</button>
+            <button type="button" id="clear">Clear</button>
+            <div class="sliderCont">
+                <input type="range" value="16" min="1" max="64"  id="gridSlider">
+                <div id="sliderValue"></div>
+            </div>
         </div>
-        <div class="gridCont">
+        <div class="gridCont" id="gridCont">
 
         </div>
     </div>
